@@ -21,5 +21,5 @@ function App() {
     </div>
   );
 }
-
+/*hola fritza */
 export default App;
