@@ -24,5 +24,5 @@ function App() {
     </div>
   );
 }
-/*hola fritza como estas??*/
+/*Instalando librería CSS*/
 export default App;
