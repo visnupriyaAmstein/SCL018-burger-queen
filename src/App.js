@@ -9,9 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button className="btn-secondary" disabled>
-            Cocina
-        </button>
+          
         <a
           className="App-link"
           href="https://reactjs.org"
