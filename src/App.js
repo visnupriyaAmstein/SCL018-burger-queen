@@ -21,5 +21,5 @@ function App() {
     </div>
   );
 }
-/*hola fritza */
+/*hola fritza como estas??*/
 export default App;
