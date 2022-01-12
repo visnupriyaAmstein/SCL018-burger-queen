@@ -21,5 +21,5 @@ function App() {
     </div>
   );
 }
-//COMMIT CON NUEVA RAMA CREADAAAAAAAAA 
+/*hola fritza */
 export default App;
