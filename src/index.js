@@ -12,6 +12,3 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
-
-
-/*StrictMode es una herramienta para resaltar problemas potenciales en una aplicación*/

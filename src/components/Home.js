@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
-return (
+    return (
         <>
             <div className="m-20">
                 <div className="flex justify-center">
@@ -13,6 +13,5 @@ return (
                 </div>
             </div>
         </>
-
-);
-}
+    );
+};
