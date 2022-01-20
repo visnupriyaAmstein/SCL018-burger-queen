@@ -3,7 +3,6 @@ export const Modals = ()=>{
         <div>
             <h2>modales</h2>
             <button>modal1</button>
-
         </div>
     );
 };

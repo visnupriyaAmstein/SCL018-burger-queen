@@ -24,7 +24,7 @@ const Menu = () => {
             filterItems(newItems); 
         } 
     };
-    
+
     return (
         <main className="main">
         <section className="menu section">
@@ -50,5 +50,5 @@ const Menu = () => {
         </main>
     );
 }
-export default Menu;
 
+export default Menu;
