@@ -1,0 +1,107 @@
+{
+    "products": [ 
+    {
+        "name": "Lassi",
+        "id": "1",
+        "price": 18,
+        "img": "https://i.imgur.com/ZSI9d8h.jpg[/img",
+        "category": "Breakfast"
+    },
+    {
+        "name": "Chapati",
+        "id": "2",
+        "price": 10,
+        "img": "https://i.imgur.com/MEYiJAO.jpg",
+        "category": "Breakfast"
+    },
+    {
+        "name": "Té Chai",
+        "id": "3",
+        "price": 11,
+        "img": "https://i.imgur.com/Hn21JW9.jpg",
+        "category": "Breakfast"
+    },
+    {
+        "name": "Idlis",
+        "id": "4",
+        "price": 15,
+        "img": "https://i.imgur.com/JTKJ0kX.jpg",
+        "category": "Breakfast"
+    },
+    {
+        "name": "Arroz Basmati",
+        "id": "5",
+        "price": 20,
+        "img": "https://i.imgur.com/f0mwVPg.jpg",
+        "category": "Lunch"
+    },
+    {
+        "name": "Matar Paneer",
+        "id": "6",
+        "price": 22,
+        "img": "https://i.imgur.com/01C6xL5.jpg",
+        "category": "Lunch"
+    },
+    {   "name": "Aloo Paneer Sabji",
+        "id": "7",
+        "price": 22,
+        "img": "https://i.imgur.com/wqKs9XN.jpg",
+        "category": "Lunch"
+    },
+    {   "name": "Aloo Capsicum",
+        "id": "8",
+        "price": 22,
+        "img": "https://i.imgur.com/0uauY7b.jpg",
+        "category": "Lunch"
+    },
+    {
+        "name": "Khatte Lehsuni",
+        "id": "9",
+        "price": 20,
+        "img": "https://i.imgur.com/x3TV25I.jpg",
+        "category": "Lunch"
+    },
+    {
+        "name": "Dhal de Arvejas",
+        "id": "10",
+        "price": 20,
+        "img": "https://i.imgur.com/D00EJVA.jpg",
+        "category": "Lunch"
+    },
+    {
+        "name": "Samosas",
+        "id": "11",
+        "price": 5,
+        "img": "https://i.imgur.com/ffXnRav.jpg",
+        "category": "Extra"
+    },
+    {
+        "name": "Gulab Jamun",
+        "id": "12",
+        "price": 5,
+        "img": "https://i.imgur.com/gppoEK1.jpg",
+        "category": "Extra"
+    },
+    {
+        "name": "Jalebis",
+        "id": "13",
+        "price": 5,
+        "img": "https://i.imgur.com/F0pumun.jpg",
+        "category": "Extra"
+    },
+    {
+        "name": "Chutney",
+        "id": "14",
+        "price": 5,
+        "img": "https://i.imgur.com/bQ1IXGF.jpg",
+        "category": "Extra"
+    },
+    {
+        "name": "Pani Puris",
+        "id": "15",
+        "price": 5,
+        "img": "https://i.imgur.com/tT3GoOm.jpg",
+        "category": "Extra"
+    }
+]
+}
