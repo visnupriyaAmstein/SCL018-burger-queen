@@ -50,4 +50,5 @@ const Menu = () => {
         </main>
     );
 }
+
 export default Menu;

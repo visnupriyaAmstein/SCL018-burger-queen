@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Modal } from "../components/Modal";
 import Waiter from "../components/Waiter";
 
- const WaiterView = ()=>{
+const WaiterView = ()=>{
     return(
         <>
         <Modal>
@@ -14,4 +14,5 @@ import Waiter from "../components/Waiter";
         </>
     );
 };
+
 export  default WaiterView;

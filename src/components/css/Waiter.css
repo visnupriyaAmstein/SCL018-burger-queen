@@ -1,15 +1,15 @@
 .order-container {
-  display: flex;
-  justify-content: center;
-  height: 745px;
+    display: flex;
+    justify-content: center;
+    height: 745px;
 }
 .btnAvatar {
-  margin-left: 40px;
-  margin-top: 20px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 .imgAvatar {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .btnOrder {
-  z-index: 1;
+    z-index: 1;
 }

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'indiaFont';
-  src: url('fonts/SAMAN___.TTF');
+    font-family: 'indiaFont';
+    src: url('fonts/SAMAN___.TTF');
 }
-

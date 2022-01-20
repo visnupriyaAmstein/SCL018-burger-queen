@@ -1,23 +1,23 @@
 .home-container{
-  width: 80%;
-  align-items: center;
-  margin-left: 0px;
+    width: 80%;
+    align-items: center;
+    margin-left: 0px;
 }
 .btnOrder {
-  font-family: 'indiaFont';
-  font-size: 2rem;
-  margin-top: 65vh;
-  margin-left: 20vw;
+    font-family: 'indiaFont';
+    font-size: 2rem;
+    margin-top: 65vh;
+    margin-left: 20vw;
 }
 .btnKidchen {
-  font-family: 'indiaFont';
-  font-size: 2rem;
-  margin-top: 65vh;
-  margin-left: 35vw;
+    font-family: 'indiaFont';
+    font-size: 2rem;
+    margin-top: 65vh;
+    margin-left: 35vw;
 }
 .imgHome {
-  margin-top: -80px;
-  /* margin-left: -80px;  */
-  position: fixed;
-  z-index: -1;
+    margin-top: -80px;
+    /* margin-left: -80px;  */
+    position: fixed;
+    z-index: -1;
 }

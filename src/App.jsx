@@ -12,7 +12,6 @@ const App = () => {
         <Route path="/prueba" element={<Menu />}/>
       </Routes>
     </>
-
   );
 }
 export default App;
