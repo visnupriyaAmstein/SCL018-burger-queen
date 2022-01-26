@@ -37,7 +37,6 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     }
 };
 
-
     useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
     }, [cartItems]);
@@ -77,8 +76,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                 <div>
                     <button  type='submit' className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
                 </div>
-                    </form>
-                    
+                    </form> 
                     <div>
                         <div>
                             <h3>Total de la orden:</h3>
