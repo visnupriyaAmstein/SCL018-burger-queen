@@ -5,7 +5,7 @@ const useModal =(initialValue=false)=>{
 
     const openModal=()=> {console.log('hola')
         return setisOpen(true)};
-    
+
     const closeModal=()=> setisOpen(false);
 
 return[isOpen, openModal, closeModal];

@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import { Route, Routes } from 'react-router-dom';
-import  Waiter  from "./components/Waiter";
 import  Menu from "./components/Menu";
+import  Waiter  from "./components/Waiter";
 
 const App = () => {
   return (

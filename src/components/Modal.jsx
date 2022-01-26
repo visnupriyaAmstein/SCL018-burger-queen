@@ -12,3 +12,4 @@ export const Modal = ({children, isOpen, closeModal})=>{
         </article>
     );
 };
+
