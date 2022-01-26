@@ -1,4 +1,4 @@
-import Home from "./components/Home.jsx";
+import Home from "./components/Home";
 import { Route, Routes } from 'react-router-dom';
 import  WaiterView  from "./views/Waiters";
 import  Menu from "./components/Menu";

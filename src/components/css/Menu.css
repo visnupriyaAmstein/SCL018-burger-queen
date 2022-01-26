@@ -84,9 +84,14 @@
     justify-content: center;
     color: white;
     padding: 3%;
+    font-family: "indiaFont";
 }
 .btn-container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.btnOrders {
+    background-color: white;
+    width: 100%;
 }
