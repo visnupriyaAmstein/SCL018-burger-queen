@@ -69,6 +69,47 @@ const Menu = () => {
         }));
     };
 
+    const addProducts = (product) => {
+        console.log("se agrego un producto",product);
+        setOrdenState((prevState) => ({
+            ...prevState, 
+            cart: prevState.cart.find((cartItem) => cartItem.id === product.id)
+            ? prevState.cart.map((cartItem) =>
+                cartItem.id === product.id
+                ? { ...cartItem, count: cartItem.count + 1 }
+                : cartItem
+            )
+            : [...prevState.cart, { ...product, count: 1 }]
+        }) )
+    }
+  
+    const removeProducts = (product) => {
+        console.log("se quito un producto",product);
+        setOrdenState((prevState) => ({
+            ...prevState, 
+            cart: prevState.cart.find((cartItem) => cartItem.id === product.id)
+            ? prevState.cart.map((cartItem) =>
+                cartItem.id === product.id
+                ? { ...cartItem, count: cartItem.count > 1 ? cartItem.count - 1: 1 }
+                : cartItem
+            )
+            : [...prevState.cart, { ...product, count: 1 }]
+        }) )
+    } 
+    const removeAllProducts= () => {
+        setOrdenState((prevState) => ({
+            ...prevState,
+            cart: []
+        }));
+    };
+
+    const deleteProducts= (product) => {
+        setOrdenState((prevState) => ({
+            ...prevState,
+            cart: prevState.cart.filter((cartItem) => cartItem.id !== product.id)
+        }));
+    };
+
     return (
         <main className="main">
         <section className="menu section">

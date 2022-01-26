@@ -15,4 +15,5 @@ export const InfoForm = () => {
 
     );
 };
+
 export default InfoForm;

@@ -77,6 +77,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                     <button  type='submit' className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
                 </div>
                     </form> 
+
                     <div>
                         <div>
                             <h3>Total de la orden:</h3>
