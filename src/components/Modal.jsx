@@ -1,11 +1,12 @@
 import React from "react";
 import '../components/css/Modal.css'
 
-export const Modal = ({children})=>{
+export const Modal = ({children, isOpen, closeModal})=>{
+     const handleModalContainerClick = e => e.stopPropagation(); //evita evento de cierre modal 
     return(
-        <article className="modal is-open">
-            <div className="modal-container">
-                <button class="modal-close">X</button>
+        <article className={`modal ${isOpen &&"is-open"}`}onClick={closeModal}>
+            <div className="modal-container" onClick={handleModalContainerClick}>
+                <button className="modal-close"onClick={closeModal}>X</button>
                 {children}
             </div>
         </article>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuItem = ({totalItems}) => {
+const MenuItem = ({totalItems, addProduct}) => {
     return (
     <section>
     <div className="section-center">
@@ -13,6 +13,7 @@ const MenuItem = ({totalItems}) => {
                     <header>
                     <h4>{name}</h4>
                     <p className="price">{price}</p>
+                    <button onClick={() => addProduct(item)} className="btnOrders">Agregar Pedido</button>
                     </header>
                 </div>
             </div>
