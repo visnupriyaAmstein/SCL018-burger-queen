@@ -25,7 +25,7 @@ const InicioSesion = () => {
 			return;
 		}
 
-        try {
+		try {
 			await signInWithEmailAndPassword(auth, correo, password);
 			navigate('/prueba');
             console.log('entraste');
@@ -46,7 +46,7 @@ const InicioSesion = () => {
 		}
 	}
 
-    return (
+  return (
         <>
 
             <form onSubmit={handleSubmit}>
@@ -67,8 +67,8 @@ const InicioSesion = () => {
                 <button as="button" type='submit'>iniciar sesion  </button>
             </form>
         </>
-
-);
+     
+  );
 
 };  
 export default InicioSesion;

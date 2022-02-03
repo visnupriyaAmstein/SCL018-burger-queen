@@ -17,15 +17,15 @@ const Waiter  = () => {
             <RegistroUsuarios/>
                 <div className="waiter-container bg-stone-900 h-screen w-full ">
                     <div className="avatarRed flex ">
-                        <img src={hrojo} alt="" className="imgAvatar w-25 h-25" />
-                        <img src={mrojo} alt="" className="imgAvatar w-25 h-25" />
+                      <img src={hrojo} alt="" className="imgAvatar w-25 h-25" />
+                      <img src={mrojo} alt="" className="imgAvatar w-25 h-25" />
                     </div>
                     <div className="btn-login">  
-                        <button onClick={openModal1} className="btnAvatar h-20 px-10 font-semibold text-lg text-teal-50 text-teal-900 transition-colors duration-150 bg-lime-500 rounded-lg focus:shadow-outline hover:bg-lime-300">Inciar Sesión</button>
+                      <button onClick={openModal1} className="btnAvatar h-20 px-10 font-semibold text-lg text-teal-50 text-teal-900 transition-colors duration-150 bg-lime-500 rounded-lg focus:shadow-outline hover:bg-lime-300">Inciar Sesión</button>
                     </div>
                 </div>
             </>
-);
+  );
 };
 
 export default Waiter;

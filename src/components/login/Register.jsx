@@ -23,7 +23,7 @@ const RegistroUsuarios = () => {
 		}
 	}
 
-    const handleSubmit = async (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if(correo === '' || password === '' ){
@@ -55,7 +55,7 @@ const RegistroUsuarios = () => {
 		}
 	}
 
-    return (
+	return (
 		<>
 			<form onSubmit={handleSubmit}>
 				<input 
@@ -77,5 +77,5 @@ const RegistroUsuarios = () => {
 		</>
 	);
 }
-
+ 
 export default RegistroUsuarios;

@@ -19,5 +19,5 @@ const BtnLogOut = () => {
 		<button as="button" onClick={cerrarSesion}>cerrar sesion </button>
 	);
 }
-
+ 
 export default BtnLogOut;

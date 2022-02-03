@@ -29,7 +29,7 @@ const Menu = () => {
             setTotalItems(newItems); 
         } 
     };
-    
+
     const addProducts = (product) => {
         console.log("se agrego un producto",product);
         setOrdenState((prevState) => ({
@@ -56,8 +56,7 @@ const Menu = () => {
             )
             : [...prevState.cart, { ...product, count: 1 }]
         }) )
-    } 
-    
+    }
     const removeAllProducts= () => {
         setOrdenState((prevState) => ({
             ...prevState,

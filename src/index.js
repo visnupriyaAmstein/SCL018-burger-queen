@@ -10,24 +10,24 @@ import  Waiter  from "./components/Waiter";
 import Home from "./components/Home";
 
 ReactDOM.render(
-  <AuthProvider1>
-    <BrowserRouter>
-        <React.StrictMode>
-        
-          <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/waiter" element={<Waiter />} />
+ <AuthProvider1>
+   <BrowserRouter>
+      <React.StrictMode>
+      
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/waiter" element={<Waiter />} />
 
-          <Route path="/prueba" element={
-            <PrivateRoute>
-            <Menu />
-            </PrivateRoute>
-          }/>
-          </Routes>
-        </React.StrictMode>
-        </BrowserRouter>
-  </AuthProvider1>,
-        document.getElementById('root')
+        <Route path="/prueba" element={
+          <PrivateRoute>
+           <Menu />
+          </PrivateRoute>
+        }/>
+        </Routes>
+      </React.StrictMode>
+      </BrowserRouter>
+ </AuthProvider1>,
+      document.getElementById('root')
 );
 
 

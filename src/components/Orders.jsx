@@ -40,7 +40,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     }
 };
 
-    useEffect(() => {
+useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
     }, [cartItems]);
 
@@ -57,7 +57,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                         <div className={style.tableWaiter}>
                             <div>Garzon</div>
                             <div>{table}</div>
-                        </div>
+                            </div>
                         <div>{cartItems.length === 0 && <h3 id="emptyOrder" className={style.emptyOrder}>Orden vacía</h3>}</div>
                         <form onSubmit={(e) => toFirebase(e)}>
                             <table className={style.table}>
@@ -68,16 +68,16 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                                         <p className={style.listP}>{item.name}</p>
                                     </td>
                                     <td>
-                                        <button type="button" onClick={() => addProduct(item)} className={style.changeNumberItem} id="add"><i class="fas fa-plus-circle text-green-500"></i></button>
+                                        <button type="button" onClick={() => addProduct(item)} className={style.changeNumberItem} id="add"><i className="fas fa-plus-circle text-green-500"></i></button>
                                     </td>
                                     <td>
                                         <p>{item.count} x {item.price}</p>
                                     </td>
                                     <td>
-                                        <button type="button" onClick={() => removeProducts(item)} className={style.changeNumberItem} id="deduct"><i class="fas fa-minus-circle text-amber-500"></i></button>
+                                        <button type="button" onClick={() => removeProducts(item)} className={style.changeNumberItem} id="deduct"><i className="fas fa-minus-circle text-amber-500"></i></button>
                                     </td>
                                     <td>
-                                        <button type="button" onClick={() => deleteProducts(item)} className={style.changeNumberItem} id="add"><i class="fas fa-times-circle text-red-600"></i></button> 
+                                    <button type="button" onClick={() => deleteProducts(item)} className={style.changeNumberItem} id="add"><i class="fas fa-times-circle text-red-600"></i></button> 
                                     </td>
                                     </tr>
                                 )})
