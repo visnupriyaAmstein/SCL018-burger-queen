@@ -3,17 +3,21 @@
     align-items: center;
     margin-left: 0px;
 }
+/* .btn-container {
+    font-size: 3rem; 
+    font-family: 'indiaFont';
+} */
 .btnOrder {
     font-family: 'indiaFont';
     font-size: 2rem;
-    margin-top: 65vh;
-    margin-left: 20vw;
+    margin-top: 65vh; 
+    margin-left: 17vw;
 }
 .btnKidchen {
     font-family: 'indiaFont';
     font-size: 2rem;
-    margin-top: 65vh;
-    margin-left: 35vw;
+    margin-top: 65vh; 
+    margin-left: 30vw;
 }
 .imgHome {
     margin-top: -80px;

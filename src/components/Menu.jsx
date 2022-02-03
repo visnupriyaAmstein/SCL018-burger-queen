@@ -4,11 +4,12 @@ import Categories from "./Categories";
 import dataMenu from "./dataMenu.json";
 import Orders from "./Orders";
 import "../components/css/Menu.css"
+import imgLogo from "../img/logo1.png";
 
 const Menu = () => {
     
     const menus = dataMenu.products;
-    const allCategories = ['all',...new Set(menus.map((item) => item.category))];
+    const allCategories = ['Todos',...new Set(menus.map((item) => item.category))];
     const [totalItems, setTotalItems] = useState(menus);
     const [initialCategory, setInitialCategory] = useState("");
     const [categories, setCategories] = useState(allCategories);
@@ -16,10 +17,11 @@ const Menu = () => {
         listOfProducts: dataMenu.products,
         cart: []
     });
-
+    const [show, showMenu]= useState(false);
+    
     const filterMenu = (category) => {
         setInitialCategory(category);
-        if (category === 'all') {
+        if (category === 'Todos') {
             setTotalItems(menus);
             return;
         } else {
@@ -27,7 +29,7 @@ const Menu = () => {
             setTotalItems(newItems); 
         } 
     };
-    
+
     const addProducts = (product) => {
         console.log("se agrego un producto",product);
         setOrdenState((prevState) => ({
@@ -41,7 +43,7 @@ const Menu = () => {
             : [...prevState.cart, { ...product, count: 1 }]
         }) )
     }
-  
+
     const removeProducts = (product) => {
         console.log("se quito un producto",product);
         setOrdenState((prevState) => ({
@@ -54,7 +56,8 @@ const Menu = () => {
             )
             : [...prevState.cart, { ...product, count: 1 }]
         }) )
-    } 
+    }
+
     const removeAllProducts= () => {
         setOrdenState((prevState) => ({
             ...prevState,
@@ -70,28 +73,29 @@ const Menu = () => {
     };
 
     return (
-        <main className="main">
-        <section className="menu section">
-            <div className="title">
-                <h2>MENU</h2>
-            <div className="underline"></div>
+        <div className="main">
+            <section className="menu section">
+                <div className="logo">
+                    <img src={imgLogo}/>
+                </div>
+                <div className="title">
+                    <h2>MENU</h2>
+                </div>   
+            </section>
+            <div className="fullScreen">
+                <div className="navMenu">
+                    <Categories
+                    categories={categories}
+                    initialCategory={initialCategory}
+                    filterMenu={filterMenu}
+                    />
+                </div>
+                <main>
+                    <MenuItem addProduct={addProducts} totalItems={totalItems} />
+                    <Orders addProduct={addProducts} cartItems={ordenState.cart} removeProducts={removeProducts} removeAllProducts={removeAllProducts} deleteProducts={deleteProducts} show={show} showMenu={showMenu}/>
+                </main>
             </div>
-            
-        </section>
-        <div className="fullScreen">
-            <section id="menuTable">
-                <Categories
-                categories={categories}
-                initialCategory={initialCategory}
-                filterMenu={filterMenu}
-                />
-                <MenuItem addProduct={addProducts} totalItems={totalItems} />
-            </section>
-            <section className="orders">
-                <Orders addProduct={addProducts} cartItems={ordenState.cart} removeProducts={removeProducts} removeAllProducts={removeAllProducts} deleteProducts={deleteProducts}/>
-            </section>
         </div>
-        </main>
     );
 }
 export default Menu;

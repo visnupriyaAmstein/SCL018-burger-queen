@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
-import db from "../firebase";
+import React, { useEffect, useState} from 'react';
+import {db} from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom';
+import style from "./css/Orders.module.css"
+import Dropdowns from './Dropdowns';
 
-const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, deleteProducts}) => {
-    console.log(cartItems);
+
+const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, deleteProducts, show, showMenu}) => {
+
+    const [table, setTable] = useState('');
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.count, 0);
-    console.log(itemsPrice);
-
     const getDate = () => {
         const hoy = new Date();
         const fecha = `${hoy.getDate()} - ${(hoy.getMonth() + 1)} - ${hoy.getFullYear()}`;
@@ -26,6 +28,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
         console.log("funcionando toFirebase");
     try {
         const docRef = await addDoc(collection(db, 'orders'), {
+            Table: {table},
             Total: totalPrice,
             Time: getDate(),
             Order: cartItems,
@@ -37,57 +40,67 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     }
 };
 
-    useEffect(() => {
+useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
     }, [cartItems]);
 
     return (
         <>
-            <aside id="order">
-                <div id="titlesAbove">
-                    <h2>Pedido</h2>
-                    <div id="tableInfo">
-                        <h3>Garzon 1</h3>
-                        <h3>Mesa 2</h3>
+            <aside id="order" className={style.order}>
+                <h1 className={style.title}>Resumen del Pedidos</h1>
+                <div className={style.conteiner}>
+                    <div id="tableInfo" className={style.tableInfo} >
+                        <h3>Garzon</h3>
+                        <Dropdowns show={show} showMenu={showMenu} setTable={setTable}/>
                     </div>
-                    <div>{cartItems.length === 0 && <h3 id="emptyOrder">Orden vacía</h3>}</div>
-                    <form onSubmit={(e) => toFirebase(e)}>
-                    {cartItems?.map((item) => {
-                        return(<div key={item.id} className="itemsInOrder">
-                        <p>{item.name}</p>
-                        <div>
-                            <button type="button" onClick={() => addProduct(item)} className="changeNumberItem" id="add">+</button>
-                            <button
-                                type="button"
-                                onClick={() => removeProducts(item)}
-                                className="changeNumberItem"
-                                id="deduct"
-                                >-</button>
+                    <div id="titlesAbove" className={style.titlesAbove}>
+                        <div className={style.tableWaiter}>
+                            <div>Garzon</div>
+                            <div>{table}</div>
+                            </div>
+                        <div>{cartItems.length === 0 && <h3 id="emptyOrder" className={style.emptyOrder}>Orden vacía</h3>}</div>
+                        <form onSubmit={(e) => toFirebase(e)}>
+                            <table className={style.table}>
+                                <tbody>
+                                    {cartItems?.map((item) => {
+                                    return(<tr key={item.id} className={style.itemsInOrder}>
+                                    <td>
+                                        <p className={style.listP}>{item.name}</p>
+                                    </td>
+                                    <td>
+                                        <button type="button" onClick={() => addProduct(item)} className={style.changeNumberItem} id="add"><i className="fas fa-plus-circle text-green-500"></i></button>
+                                    </td>
+                                    <td>
+                                        <p>{item.count} x {item.price}</p>
+                                    </td>
+                                    <td>
+                                        <button type="button" onClick={() => removeProducts(item)} className={style.changeNumberItem} id="deduct"><i className="fas fa-minus-circle text-amber-500"></i></button>
+                                    </td>
+                                    <td>
+                                    <button type="button" onClick={() => deleteProducts(item)} className={style.changeNumberItem} id="add"><i class="fas fa-times-circle text-red-600"></i></button> 
+                                    </td>
+                                    </tr>
+                                )})
+                                }
+                                </tbody>
+                            </table>
+                        
+                    <div className={style.equalPrice}>
+                        <h3>Total de la orden:</h3>
+                        <p className={style.colorPrice}>$</p><p className={style.colorPrice}>{itemsPrice}</p>
+                    </div>   
+                    <div className={style.btnSendDelete}>  
+                        <div className={style.btnSend}>
+                            <button  type='submit' className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
                         </div>
-                        <div>
-                            <p>
-                            {item.count} x {item.price}
-                            </p>
-                            <button type="button" onClick={() => deleteProducts(item)} className="changeNumberItem" id="add">Eliminar</button>
-                        </div>  
-                    </div>
-                )})
-                }
-                <div>
-                    <button  type='submit' className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
-                </div>
-                    </form> 
-
-                    <div>
-                        <div>
-                            <h3>Total de la orden:</h3>
-                            <p>{itemsPrice}</p>
+                        <div className={style.btnDelete}>
                             <button type="button" onClick={removeAllProducts} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>
-                        </div>      
-                    </div>
+                        </div>
+                    </div> 
+                    </form> 
+                </div>
                 </div>
             </aside>
-        
         </>
     )
 }
