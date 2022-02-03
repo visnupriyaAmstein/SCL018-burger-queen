@@ -21,6 +21,7 @@
     min-width: 200px;
     min-height: 400px;
     margin-top: -150px;
+    border-radius: 15px;
 }
 .modal-close {
     position:absolute;

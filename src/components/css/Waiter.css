@@ -1,15 +1,11 @@
-.order-container {
-    display: flex;
-    justify-content: center;
-    height: 745px;
+.waiter-container {
+    position: fixed;
 }
-.btnAvatar {
-    margin-left: 40px;
-    margin-top: 20px;
-}
-.imgAvatar {
-    margin-top: 40px;
-}
-.btnOrder {
-    z-index: 1;
+.avatarRed {
+    margin-left: 30vw;
+    margin-top: 20vh;
+} 
+.btn-login {
+    margin-top: 6vh;
+    margin-left: 43vw;
 }
