@@ -90,7 +90,7 @@ const Menu = () => {
                     </div>
                 <header className="title">
                     <h2>MENU</h2>
-                </header>
+                </header>   
             </section>
             <div className="fullScreen">
                 <div className="navMenu">

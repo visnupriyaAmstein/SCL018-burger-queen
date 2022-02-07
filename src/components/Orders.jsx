@@ -20,7 +20,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
         const fecha = `${hoy.getDate()} - ${(hoy.getMonth() + 1)} - ${hoy.getFullYear()}`;
         const hora = `${hoy.getHours()}:${hoy.getMinutes()}:${hoy.getSeconds()}`;
         const fechaYHora = `${fecha} ${hora}`;
-        return fechaYHora;  
+        return fechaYHora;
     };
 
     const totalPrice = itemsPrice;
@@ -39,7 +39,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                 text: "No has ingresado productos al pedido",
                 icon: "error",
             });
-        } else {
+            } else {
             Swal.fire({
                 title: "¿Deseas confirmar el pedido?",
                 text: "Si tienes dudas, consúltalo con el cliente",
@@ -99,9 +99,9 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     }
 };
 
-// useEffect(() => {
-//     localStorage.setItem('cart', JSON.stringify(cartItems));
-//     }, [cartItems]);
+/*useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    }, [cartItems]);*/
 
     return (
         <>
@@ -148,7 +148,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                     </div>   
                     <div className={style.btnSendDelete}>  
                         <div className={style.btnSend}>
-                            <button  type='submit'className="interactionWithOrder" id="sendOrder" onClick={sendOrder}>Enviar Pedido</button>
+                            <button  type='submit'className="interactionWithOrder" id="sendOrder" onClick={sendOrder} >Enviar Pedido</button>
                         </div>
                         <div className={style.btnDelete}>
                             <button type="button" onClick={deleteOrder} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>

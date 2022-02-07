@@ -60,7 +60,7 @@ return (
                     <h2>Mesa: {order.Table}</h2>
                     {order.Order.map((element) => (
                         <div key={element.id}>
-                            <div>Pedido: {element.name} Cantidad: {element.count}</div>
+                            <p>Pedido: {element.name} Cantidad: {element.count}</p>
                         </div>
                     ))}
                     <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
