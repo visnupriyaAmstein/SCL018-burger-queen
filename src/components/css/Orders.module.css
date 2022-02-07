@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .order {
+    width: 320px;
     display: flex;
     background-color:#DFC533 ;
     padding-right: 20px;
@@ -12,6 +13,7 @@
 .title {
     font-size: 30px;
     padding-top: 30px;
+    padding-left: 30px;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;

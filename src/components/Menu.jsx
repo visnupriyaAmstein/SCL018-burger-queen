@@ -5,6 +5,8 @@ import dataMenu from "./dataMenu.json";
 import Orders from "./Orders";
 import "../components/css/Menu.css"
 import imgLogo from "../img/logo1.png";
+import BtnLogOut from "./login/LogOut";
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     
@@ -80,7 +82,13 @@ const Menu = () => {
                 </div>
                 <div className="title">
                     <h2>MENU</h2>
-                </div>   
+                    <BtnLogOut/>
+                    <Link to="/orderReady"
+                    className="px-3 py-2 flex items-center"
+                    alt="Acceso a lista de entrega">
+                    <i className="far fa-check-circle"></i>
+                    </Link>
+                </div>  
             </section>
             <div className="fullScreen">
                 <div className="navMenu">

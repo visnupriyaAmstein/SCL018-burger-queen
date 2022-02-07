@@ -1,14 +1,14 @@
 import React, { useEffect, useState} from 'react';
 import {db} from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { Link } from 'react-router-dom';
 import style from "./css/Orders.module.css"
 import Dropdowns from './Dropdowns';
-
+import DropdownsGarzon from './DropdownsGarzon';
 
 const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, deleteProducts, show, showMenu}) => {
 
     const [table, setTable] = useState('');
+    const [garzon, setGarzon] = useState('');
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.count, 0);
     const getDate = () => {
@@ -28,12 +28,15 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
         console.log("funcionando toFirebase");
     try {
         const docRef = await addDoc(collection(db, 'orders'), {
-            Table: {table},
+            Garzon: garzon,
+            Table: table,
             Total: totalPrice,
             Time: getDate(),
             Order: cartItems,
-            Terminado: 'Pedido esperando',
+            Status: 'Pendiente',
+
     });
+        removeAllProducts();
         console.log('Document written with ID: ', docRef.id);
     } catch (e) {
         console.error('Error adding document: ', e);
@@ -50,12 +53,12 @@ useEffect(() => {
                 <h1 className={style.title}>Resumen del Pedidos</h1>
                 <div className={style.conteiner}>
                     <div id="tableInfo" className={style.tableInfo} >
-                        <h3>Garzon</h3>
+                        <DropdownsGarzon show={show} showMenu={showMenu} setGarzon={setGarzon} />
                         <Dropdowns show={show} showMenu={showMenu} setTable={setTable}/>
                     </div>
                     <div id="titlesAbove" className={style.titlesAbove}>
                         <div className={style.tableWaiter}>
-                            <div>Garzon</div>
+                            <div>{garzon}</div>
                             <div>{table}</div>
                             </div>
                         <div>{cartItems.length === 0 && <h3 id="emptyOrder" className={style.emptyOrder}>Orden vacía</h3>}</div>
@@ -77,7 +80,7 @@ useEffect(() => {
                                         <button type="button" onClick={() => removeProducts(item)} className={style.changeNumberItem} id="deduct"><i className="fas fa-minus-circle text-amber-500"></i></button>
                                     </td>
                                     <td>
-                                    <button type="button" onClick={() => deleteProducts(item)} className={style.changeNumberItem} id="add"><i class="fas fa-times-circle text-red-600"></i></button> 
+                                    <button type="button" onClick={() => deleteProducts(item)} className={style.changeNumberItem} id="add"><i className="fas fa-times-circle text-red-600"></i></button> 
                                     </td>
                                     </tr>
                                 )})

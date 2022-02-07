@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.btn-IS {
+    display: flex;
+    justify-content: center;
+}
+.button-IS {
+    width: 18vw; 
+    height: 6vh;
+    border: 1px solid rgb(248, 238, 238); 
+    margin-top: 5vh;
+    font-size: 1.2rem;
+    color:black;
+}
+.imgLogo {
+    width: 15vw;
+    margin-left: 13vw;
+}
+.input {
+    background-color: #DFC533;
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5vh;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgb(248, 238, 238);
+    font-size: 1.5rem;
+    color: black;
+}
+::placeholder {
+    letter-spacing: 0.3em;
+    text-align-last: center;
+    font-size: 1.2rem;
+}

@@ -7,9 +7,9 @@ const MenuItem = ({totalItems, addProduct}) => {
             {totalItems.map((item) => {
             const { id, name, img, price } = item;
             return (
-                <div className="card">
+                <div className="card"key={id}>
                     <div className="card_image-container">
-                    <img key={id} src={img} alt={name} className="photo" />
+                    <img  src={img} alt={name} className="photo" />
                     <div className="card_content">
                         <p className="card_title text--medium">{name}</p>
                         <div className="card_info">
