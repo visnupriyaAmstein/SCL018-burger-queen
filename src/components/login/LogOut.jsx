@@ -18,7 +18,7 @@ const BtnLogOut = () => {
 
 	return (
 		<div className='btn-LogOut'>
-            <button as="button" onClick={cerrarSesion}><i className="fas fa-sign-out-alt opacity-75 "></i></button>
+            <button as="button" onClick={cerrarSesion}><i className="fas fa-sign-out-alt opacity-75 fa-3x"></i></button>
 		</div>
 	);
 }

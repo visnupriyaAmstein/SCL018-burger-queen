@@ -4,11 +4,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /*font-family: 'Montserrat', sans-serif;*/
 }
 body {
     background-color: black;
-    color: white
+    color: white;
 }
 main {
     display: grid;
@@ -19,16 +18,15 @@ main {
 .title {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-    padding-top: 25px;
     font-family: 'indiaFont';
     font-size: 60px;
     margin-left: 44vw;
 }
-.btn-LogOut {
+.btnLogOutAndOrdersReady {
     display: flex;
-    margin-left: 37vw;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
 }
 .navMenu {
     display: flex;
@@ -97,6 +95,10 @@ main {
     padding: 0.2rem 0.2rem;
     background-color: white;
     border-radius: 1.25rem;
+}
+.btn_LogOut {
+    margin-left: 94vw;
+    margin-top: -7vh;
 }
 
 @media only screen and (min-width: 1001px) {

@@ -1,27 +1,15 @@
 .home-container{
     width: 80%;
-    align-items: center;
     margin-left: 0px;
+    display: flex;
 }
-/* .btn-container {
-    font-size: 3rem; 
+.btn-IS-container {
     font-family: 'indiaFont';
-} */
-.btnOrder {
-    font-family: 'indiaFont';
-    font-size: 2rem;
-    margin-top: 65vh; 
-    margin-left: 17vw;
-}
-.btnKitchen {
-    font-family: 'indiaFont';
-    font-size: 2rem;
-    margin-top: 65vh; 
-    margin-left: 30vw;
+    margin-top: 75vh; 
+    margin-left: 38vw;
 }
 .imgHome {
     margin-top: -80px;
-    /* margin-left: -80px;  */
     position: fixed;
     z-index: -1;
 }

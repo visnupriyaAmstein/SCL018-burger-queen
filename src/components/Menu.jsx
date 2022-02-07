@@ -80,15 +80,17 @@ const Menu = () => {
                 <div className="logo">
                     <img src={imgLogo}/>
                 </div>
-                <div className="title">
+                <div className="btnLogOutAndOrdersReady">
+                        <BtnLogOut/>
+                        <Link to="/orderReady"
+                        className="px-3 py-2 flex items-center"
+                        alt="Acceso a lista de entrega">
+                        <i className="far fa-check-circle opacity-75 fa-3x"></i>
+                        </Link>
+                    </div>
+                <header className="title">
                     <h2>MENU</h2>
-                    <BtnLogOut/>
-                    <Link to="/orderReady"
-                    className="px-3 py-2 flex items-center"
-                    alt="Acceso a lista de entrega">
-                    <i className="far fa-check-circle"></i>
-                    </Link>
-                </div>   
+                </header>   
             </section>
             <div className="fullScreen">
                 <div className="navMenu">

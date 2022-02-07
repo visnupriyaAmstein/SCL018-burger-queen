@@ -1,11 +1,22 @@
 .waiter-container {
     position: fixed;
+    font-family: 'indiaFont';
 }
-.avatarRed {
-    margin-left: 30vw;
-    margin-top: 20vh;
-} 
-.btn-login {
-    margin-top: 6vh;
-    margin-left: 43vw;
+.imgkusum {
+    position: fixed;
+    z-index: -1;
+    margin-top: -20px;
+    margin-left: -20px;
+    opacity: 95%;
+}
+.footer-btn {
+    display: flex;
+}
+.btnOrder {
+    margin-top: 60vh;
+    margin-left: 17vw;
+}
+.btnKitchen {
+    margin-top: 60vh;
+    margin-left: 24vw;
 }

@@ -3,7 +3,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState} from "react";
 import style from "./css/OrdersList.module.css"
 import { doc, updateDoc } from "firebase/firestore";
-
+import BtnLogOut from "./login/LogOut";
 
 const OrdersList = () => {
 
@@ -36,7 +36,6 @@ const OrdersList = () => {
             return order.Status === "Pendiente";
         })
     
-
     let sortedPendingOrders = finishedOrders.sort((a, b) => {
         if (a.Time > b.Time) {
         return 1;
@@ -50,6 +49,9 @@ const OrdersList = () => {
 
 return (
     <>
+    <div className="btn_LogOut">
+        <BtnLogOut/>
+    </div>
     <h2>PEDIDOS PENDIENTES</h2>
         <div>
             {sortedPendingOrders.map((order) => (
@@ -58,7 +60,7 @@ return (
                     <h2>Mesa: {order.Table}</h2>
                     {order.Order.map((element) => (
                         <div key={element.id}>
-                            <div>Pedido: {element.name} Cantidad: {element.count}</div>
+                            <p>Pedido: {element.name} Cantidad: {element.count}</p>
                         </div>
                     ))}
                     <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
