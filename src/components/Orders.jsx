@@ -34,7 +34,6 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
             Time: getDate(),
             Order: cartItems,
             Status: 'Pendiente',
-
     });
         removeAllProducts();
         console.log('Document written with ID: ', docRef.id);
@@ -50,7 +49,7 @@ useEffect(() => {
     return (
         <>
             <aside id="order" className={style.order}>
-                <h1 className={style.title}>Resumen del Pedidos</h1>
+                <h1 className={style.title}>Resumen del Pedido</h1>
                 <div className={style.conteiner}>
                     <div id="tableInfo" className={style.tableInfo} >
                         <DropdownsGarzon show={show} showMenu={showMenu} setGarzon={setGarzon} />
@@ -94,7 +93,7 @@ useEffect(() => {
                     </div>   
                     <div className={style.btnSendDelete}>  
                         <div className={style.btnSend}>
-                            <button  type='submit' className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
+                            <button  type='submit'className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
                         </div>
                         <div className={style.btnDelete}>
                             <button type="button" onClick={removeAllProducts} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>

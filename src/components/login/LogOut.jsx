@@ -22,5 +22,5 @@ const BtnLogOut = () => {
 		</div>
 	);
 }
- 
+
 export default BtnLogOut;

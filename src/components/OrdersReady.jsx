@@ -32,41 +32,41 @@ const OrdersReady = () => {
     };
 
     const finishedOrders = postedOrders.filter((order) => {
-        return order.Status === "Terminado";
-    })
+            return order.Status === "Terminado";
+        })
+    
 
+    let sortedPendingOrders = finishedOrders.sort((a, b) => {
+        if (a.Time > b.Time) {
+        return 1;
+        }
+        if (a.Time < b.Time) {
+        return -1;
+        }
+        // a debe ser igual b
+        return 0;
+    });
 
-let sortedPendingOrders = finishedOrders.sort((a, b) => {
-    if (a.Time > b.Time) {
-    return 1;
-    }
-    if (a.Time < b.Time) {
-    return -1;
-    }
-    // a debe ser igual b
-    return 0;
-});
-
-return (
-    <>
-    <h2>PEDIDOS PENDIENTES</h2>
-        <div>
-            {sortedPendingOrders.map((order) => (
-                <div key={order.id} className={style.ordersKitchen}>
-                    <h1>Garzón: Garzón</h1>
-                    <h2>Mesa: {order.Table}</h2>
-                    {order.Order.map((element) => (
-                        <div key={element.id}>
-                            <div>Pedido: {element.name} Cantidad: {element.count}</div>
-                        </div>
-                    ))}
-                    <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
-                </div>
-            )
-            )}
-        </div>
-        </>
-    );
+    return (
+        <>
+        <h2>PEDIDOS PENDIENTES</h2>
+            <div>
+                {sortedPendingOrders.map((order) => (
+                    <div key={order.id} className={style.ordersKitchen}>
+                        <h1>Garzón: Garzón</h1>
+                        <h2>Mesa: {order.Table}</h2>
+                        {order.Order.map((element) => (
+                            <div key={element.id}>
+                                <div>Pedido: {element.name} Cantidad: {element.count}</div>
+                            </div>
+                        ))}
+                        <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
+                    </div>
+                )
+                )}
+            </div>
+            </>
+        );
 
 }
 

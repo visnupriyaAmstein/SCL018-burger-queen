@@ -23,7 +23,7 @@ const OrdersList = () => {
         )
     }, []);
 
-    //Función para editar el Status de los pedidos
+      //Función para editar el Status de los pedidos
     const statusChange = async (idOrder) => {
         console.log(idOrder);
         const postEdit = doc(db, 'orders', idOrder);
@@ -48,26 +48,26 @@ const OrdersList = () => {
         return 0;
     });
 
-    return (
-        <>
-        <h2>PEDIDOS PENDIENTES</h2>
-            <div>
-                {sortedPendingOrders.map((order) => (
-                    <div key={order.id} className={style.ordersKitchen}>
-                        <h1>Garzón: Garzón</h1>
-                        <h2>Mesa: {order.Table}</h2>
-                        {order.Order.map((element) => (
-                            <div key={element.id}>
-                                <div>Pedido: {element.name} Cantidad: {element.count}</div>
-                            </div>
-                        ))}
-                        <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
-                    </div>
-                )
-                )}
-            </div>
-            </>
-        );
-    };
-    
-    export default OrdersList;    
+return (
+    <>
+    <h2>PEDIDOS PENDIENTES</h2>
+        <div>
+            {sortedPendingOrders.map((order) => (
+                <div key={order.id} className={style.ordersKitchen}>
+                    <h1>Garzón: Garzón</h1>
+                    <h2>Mesa: {order.Table}</h2>
+                    {order.Order.map((element) => (
+                        <div key={element.id}>
+                            <div>Pedido: {element.name} Cantidad: {element.count}</div>
+                        </div>
+                    ))}
+                    <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
+                </div>
+            )
+            )}
+        </div>
+        </>
+    );
+};
+
+export default OrdersList;

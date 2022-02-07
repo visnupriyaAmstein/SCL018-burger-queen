@@ -13,7 +13,7 @@ const Home = () => {
                 <img src={imgHome} alt="" className="imgHome h-full w-full"/>
                 <div className="btn-container  ">
                 <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
-                  <InicioSesion/>
+                <InicioSesion/>
                 </Modal>
                 </div>
                 <button onClick={openModal1} className="btnAvatar h-20 px-10 font-semibold text-lg text-teal-50 text-teal-900 transition-colors duration-150 bg-lime-500 rounded-lg focus:shadow-outline hover:bg-lime-300">Inciar Sesión</button>

@@ -22,7 +22,7 @@ const InicioSesion = () => {
 		// }
 	}
 
-    const handleSubmit = async (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if(correo === '' || password === ''){
@@ -50,7 +50,7 @@ const InicioSesion = () => {
 		}
 	}
 
-  return (
+	return (
         <>
             <form onSubmit={handleSubmit}>
 					<div className='input-container'>
@@ -70,10 +70,10 @@ const InicioSesion = () => {
 						/>
 					</div>
 					<div className='btn-IS'>
-                        <button as="button" className='button-IS px-10 font-semibold text-lg text-teal-50 text-teal-900 transition-colors duration-150 bg-lime-500 rounded-lg focus:shadow-outline hover:bg-lime-300"' type='submit'>Iniciar Sesión</button>
-				</div>
+                <button as="button" className='button-IS px-10 font-semibold text-lg text-teal-50 text-teal-900 transition-colors duration-150 bg-lime-500 rounded-lg focus:shadow-outline hover:bg-lime-300"' type='submit'>Iniciar Sesión</button>
+				</div> 
             </form>
         </>
-  );
+);
 };  
 export default InicioSesion;

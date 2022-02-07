@@ -59,6 +59,7 @@ const Menu = () => {
             : [...prevState.cart, { ...product, count: 1 }]
         }) )
     }
+
     const removeAllProducts= () => {
         setOrdenState((prevState) => ({
             ...prevState,
@@ -87,7 +88,7 @@ const Menu = () => {
                     alt="Acceso a lista de entrega">
                     <i className="far fa-check-circle"></i>
                     </Link>
-                </div>  
+                </div>   
             </section>
             <div className="fullScreen">
                 <div className="navMenu">
