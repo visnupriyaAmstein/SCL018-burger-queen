@@ -1,15 +1,19 @@
 import React from "react";
 import '../components/css/Modal.css'
+import logo1 from '../img/logo1.png'
 
 export const Modal = ({children, isOpen, closeModal})=>{
      const handleModalContainerClick = e => e.stopPropagation(); //evita evento de cierre modal 
     return(
-        <article className={`modal ${isOpen &&"is-open"}`}onClick={closeModal}>
+        <main className={`modal ${isOpen &&"is-open"}`}onClick={closeModal}>
             <div className="modal-container" onClick={handleModalContainerClick}>
-                <button className="modal-close "onClick={closeModal}>X</button>
+                <article className="art-Logo"> 
+                <img src={logo1} alt="" className="imgLogo " />
+                </article>
+                <button className="modal-close "onClick={closeModal}><i className="fas fa-times-circle fa-2x text-lime-500"></i></button>
                 {children}
             </div>
-        </article>
+        </main>
     );
 };
 

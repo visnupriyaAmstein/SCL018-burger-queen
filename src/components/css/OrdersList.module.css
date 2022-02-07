@@ -1,0 +1,5 @@
+.ordersKitchen {
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+}
