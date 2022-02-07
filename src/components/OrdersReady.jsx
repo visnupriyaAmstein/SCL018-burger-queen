@@ -35,7 +35,6 @@ const OrdersReady = () => {
             return order.Status === "Terminado";
         })
     
-
     let sortedPendingOrders = finishedOrders.sort((a, b) => {
         if (a.Time > b.Time) {
         return 1;
@@ -43,13 +42,12 @@ const OrdersReady = () => {
         if (a.Time < b.Time) {
         return -1;
         }
-        // a debe ser igual b
         return 0;
     });
 
     return (
         <>
-        <h2>PEDIDOS PENDIENTES</h2>
+        <h2>PEDIDOS LISTOS PARA SERVIR</h2>
             <div>
                 {sortedPendingOrders.map((order) => (
                     <div key={order.id} className={style.ordersKitchen}>
@@ -57,17 +55,17 @@ const OrdersReady = () => {
                         <h2>Mesa: {order.Table}</h2>
                         {order.Order.map((element) => (
                             <div key={element.id}>
-                                <div>Pedido: {element.name} Cantidad: {element.count}</div>
+                                <p>Pedido: {element.name} Cantidad: {element.count}</p>
                             </div>
                         ))}
-                        <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
+                        <p>Total a pagar: $ {order.Total}</p>
+                        <button onClick={() => statusChange(order.id)}>PEDIDO ENTREGADO</button>
                     </div>
                 )
                 )}
             </div>
-            </>
+        </>
         );
-
 }
 
 export default OrdersReady;

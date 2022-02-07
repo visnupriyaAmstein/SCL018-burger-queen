@@ -4,8 +4,12 @@ import { collection, addDoc } from "firebase/firestore";
 import style from "./css/Orders.module.css"
 import Dropdowns from './Dropdowns';
 import DropdownsGarzon from './DropdownsGarzon';
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, deleteProducts, show, showMenu}) => {
+
+    const MySwal = withReactContent(Swal);
 
     const [table, setTable] = useState('');
     const [garzon, setGarzon] = useState('');
@@ -16,11 +20,64 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
         const fecha = `${hoy.getDate()} - ${(hoy.getMonth() + 1)} - ${hoy.getFullYear()}`;
         const hora = `${hoy.getHours()}:${hoy.getMinutes()}:${hoy.getSeconds()}`;
         const fechaYHora = `${fecha} ${hora}`;
-        return fechaYHora;
-        
+        return fechaYHora;  
     };
 
     const totalPrice = itemsPrice;
+
+    // alert para confirmar el enviar pedido a la cocina
+    const sendOrder = (e) => {
+        if (table === "" || garzon === "") {
+            MySwal.fire({
+                title: "Ups...",
+                text: "Creo que olvidaste escribir el Garzón o Mesa del cliente",
+                icon: "error",
+            });
+            } else if (cartItems.length === 0) {
+            MySwal.fire({
+                title: "Espera un momento!",
+                text: "No has ingresado productos al pedido",
+                icon: "error",
+            });
+        } else {
+            Swal.fire({
+                title: "¿Deseas confirmar el pedido?",
+                text: "Si tienes dudas, consúltalo con el cliente",
+                icon: "warning",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Confirmar",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                Swal.fire("Enviado", "El pedido ha sido enviado a Cocina", "success");
+                toFirebase(e);
+                }
+            });
+        }
+    };
+
+    // alert para confirmar la eliminación del pedido 
+    const deleteOrder = () => {
+        if(cartItems.length !== 0) {
+            Swal.fire({
+                title: "¿Deseas eliminar el pedido?",
+                text: "Si tienes dudas, consúltalo con el cliente",
+                icon: "warning",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Confirmar",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                Swal.fire("Eliminado", "El pedido ha sido eliminado", "success");
+                removeAllProducts();
+                }
+            });
+        }
+    }
 
     // Función para crear la colección de "orders"
     const toFirebase = async (e) => {
@@ -42,9 +99,9 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     }
 };
 
-useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [cartItems]);
+// useEffect(() => {
+//     localStorage.setItem('cart', JSON.stringify(cartItems));
+//     }, [cartItems]);
 
     return (
         <>
@@ -61,7 +118,6 @@ useEffect(() => {
                             <div>{table}</div>
                             </div>
                         <div>{cartItems.length === 0 && <h3 id="emptyOrder" className={style.emptyOrder}>Orden vacía</h3>}</div>
-                        <form onSubmit={(e) => toFirebase(e)}>
                             <table className={style.table}>
                                 <tbody>
                                     {cartItems?.map((item) => {
@@ -86,20 +142,18 @@ useEffect(() => {
                                 }
                                 </tbody>
                             </table>
-                        
                     <div className={style.equalPrice}>
                         <h3>Total de la orden:</h3>
                         <p className={style.colorPrice}>$</p><p className={style.colorPrice}>{itemsPrice}</p>
                     </div>   
                     <div className={style.btnSendDelete}>  
                         <div className={style.btnSend}>
-                            <button  type='submit'className="interactionWithOrder" id="sendOrder">Enviar Pedido</button>
+                            <button  type='submit'className="interactionWithOrder" id="sendOrder" onClick={sendOrder}>Enviar Pedido</button>
                         </div>
                         <div className={style.btnDelete}>
-                            <button type="button" onClick={removeAllProducts} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>
+                            <button type="button" onClick={deleteOrder} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>
                         </div>
                     </div> 
-                    </form> 
                 </div>
                 </div>
             </aside>
