@@ -59,7 +59,6 @@ const Menu = () => {
             : [...prevState.cart, { ...product, count: 1 }]
         }) )
     }
-
     const removeAllProducts= () => {
         setOrdenState((prevState) => ({
             ...prevState,
