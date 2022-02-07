@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
+
 const RegistroUsuarios = () => {
 	const navigate = useNavigate();
 	const [correo, establecerCorreo] = useState('');

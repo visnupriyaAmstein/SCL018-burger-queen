@@ -12,5 +12,5 @@ const PrivateRoute = ({children}) => {
 	}
 }
  //toma los componentes hijos y los re direcciona
-
+ 
 export default PrivateRoute;
