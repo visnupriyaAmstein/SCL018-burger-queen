@@ -114,8 +114,8 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                     </div>
                     <div id="titlesAbove" className={style.titlesAbove}>
                         <div className={style.tableWaiter}>
-                            <div>{garzon}</div>
-                            <div>{table}</div>
+                            <h1>{garzon}</h1>
+                            <h2>{table}</h2>
                             </div>
                         <div>{cartItems.length === 0 && <h3 id="emptyOrder" className={style.emptyOrder}>Orden vacía</h3>}</div>
                             <table className={style.table}>
@@ -148,10 +148,10 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                     </div>   
                     <div className={style.btnSendDelete}>  
                         <div className={style.btnSend}>
-                            <button  type='submit'className="interactionWithOrder" id="sendOrder" onClick={sendOrder} >Enviar Pedido</button>
+                            <button  type='submit'className={style.interactionWithOrder} id="sendOrder" onClick={sendOrder} >Enviar Pedido</button>
                         </div>
                         <div className={style.btnDelete}>
-                            <button type="button" onClick={deleteOrder} className="interactionWithOrder" id="eraseOrder">Borrar Pedido</button>
+                            <button type="button" onClick={deleteOrder} className={style.interactionWithOrder} id="eraseOrder">Borrar Pedido</button>
                         </div>
                     </div> 
                 </div>

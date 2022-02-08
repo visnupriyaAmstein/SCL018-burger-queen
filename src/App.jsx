@@ -13,7 +13,7 @@ const App = () => {
       <AuthProvider1>
         <Routes>
           <Route path="/" element={<Home />} />
-          
+
           <Route path="/waiter" element={
           <PrivateRoute>
           <Waiter />

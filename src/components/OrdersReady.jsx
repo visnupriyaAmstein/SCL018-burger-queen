@@ -9,7 +9,7 @@ const OrdersReady = () => {
 
     const [postedOrders, setPostedOrders] = useState([]);
 
-    //Función para mostrar en pantalla los pedidos
+    //Función para mostrar en pantalla los pedidos enviados desde cocina 
     useEffect(() => {
         onSnapshot(
         collection(db, "orders"),
@@ -63,18 +63,18 @@ const OrdersReady = () => {
                         <table className={style.list}>
                         <tbody>
                         {order.Order.map((element) => (
-                            <tr key={element.id} className={style.containerPedido}>
+                            <tr  key={element.id} className={style.containerPedido}>
                                 <td className={style.tdList}>
-                                <p className={style.pedido}>Pedido:</p>
-                                <p className={style.pedido1}>{element.name}</p>
+                                    <p className={style.pedido}>Pedido:</p>
+                                    <p className={style.pedido1}>{element.name}</p>
                                 </td>
                                 <td className={style.tdList1}>
-                                <p className={style.cantidad}>Cantidad:</p>
-                                </td> 
-                                <td>
-                                <p className={style.cantidad1}>{element.count}</p>
+                                    <p className={style.cantidad}>Cantidad:</p>
                                 </td>
-                              </tr>
+                                <td>
+                                    <p className={style.cantidad1}>{element.count}</p>
+                                </td>
+                            </tr >
                         ))}
                         </tbody>
                             </table>
