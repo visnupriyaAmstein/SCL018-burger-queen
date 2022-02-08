@@ -48,7 +48,7 @@ const OrdersReady = () => {
 
     return (
         <>
-        <header >
+        <header>
         <h2 className={style.titleServir}> LISTOS PARA SERVIR</h2>
         <Link to="/menu"><button className={style.backBtn}></button><i className="far fa-arrow-alt-circle-left opacity-75 fa-3x"></i></Link>
         </header>
@@ -86,7 +86,7 @@ const OrdersReady = () => {
                 )}
             </div>
         </>
-        );
+    );
 }
 
 export default OrdersReady;
