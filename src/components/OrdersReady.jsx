@@ -50,7 +50,7 @@ const OrdersReady = () => {
         <>
         <header >
         <h2 className={style.titleServir}> LISTOS PARA SERVIR</h2>
-        <Link to="/menu"><button className={style.backBtn}></button><i class="far fa-arrow-alt-circle-left opacity-75 fa-3x"></i></Link>
+        <Link to="/menu"><button className={style.backBtn}></button><i className="far fa-arrow-alt-circle-left opacity-75 fa-3x"></i></Link>
         </header>
             <div>
                 {sortedPendingOrders.map((order) => (
@@ -60,30 +60,26 @@ const OrdersReady = () => {
                         <h1>Garzón: {order.Garzon}</h1>
                         <h2>Mesa: {order.Table}</h2>
                         </div>
-                        <div className={style.list}>
+                        <table className={style.list}>
                         <tbody>
                         {order.Order.map((element) => (
-                            <div className={style.containerPedido}>
-                                <tr key={element.id}>
+                            <tr  key={element.id} className={style.containerPedido}>
                                 <td className={style.tdList}>
-                                <p className={style.pedido}>Pedido:</p>
-                                <p className={style.pedido1}>{element.name}</p>
+                                    <p className={style.pedido}>Pedido:</p>
+                                    <p className={style.pedido1}>{element.name}</p>
                                 </td>
                                 <td className={style.tdList1}>
-                                    <td> 
                                     <p className={style.cantidad}>Cantidad:</p>
-                                    </td>
+                                </td>
                                 <td>
-                                <p className={style.cantidad1}>{element.count}</p>
+                                    <p className={style.cantidad1}>{element.count}</p>
                                 </td>
-                                </td>
-                            </tr>
-                            </div>
+                            </tr >
                         ))}
                         </tbody>
-                        <p className={style.total}>Total a pagar: $ {order.Total}</p>
-                        <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO SERVIDO</button>
-                            </div>
+                            </table>
+                            <p className={style.total}>Total a pagar: $ {order.Total}</p>
+                            <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO SERVIDO</button>
                         </div>
                     </div>
                 )

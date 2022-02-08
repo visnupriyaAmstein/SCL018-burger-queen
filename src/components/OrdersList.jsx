@@ -49,7 +49,7 @@ const OrdersList = () => {
 
 return (
     <>
-    <div className="btn_LogOut">
+    <div className={style.btnLogOut}>
         <BtnLogOut/>
     </div>
     <h2 className={style.titlePendientes}>Ordenes Pendientes</h2>
@@ -57,33 +57,29 @@ return (
         {sortedPendingOrders.map((order) => (
                     <div key={order.id}  className={style.ordersKitchen}>
                         <div className={style.containerWhite}> 
-                        <div className={style.garzonMesa}>
-                        <h1>Garzón: {order.Garzon}</h1>
-                        <h2>Mesa: {order.Table}</h2>
-                        </div>
-                        <div className={style.list}>
-                        <tbody>
-                        {order.Order.map((element) => (
-                            <div className={style.containerPedido}>
-                            <tr key={element.id}>
-                                <td className={style.tdList}>
-                                <p className={style.pedido}>Pedido:</p>
-                                <p className={style.pedido1}>{element.name}</p>
-                                </td>
-                                <td className={style.tdList1}>
-                                    <td> 
-                                    <p className={style.cantidad}>Cantidad:</p>
+                            <div className={style.garzonMesa}>
+                                <h1>Garzón: {order.Garzon}</h1>
+                                <h2>Mesa: {order.Table}</h2>
+                            </div>
+                            <table className={style.list}>
+                            <tbody>
+                            {order.Order.map((element) => (
+                                <tr key={element.id} className={style.containerPedido}>
+                                    <td className={style.tdList}>
+                                        <p className={style.pedido}>Pedido:</p>
+                                        <p className={style.pedido1}>{element.name}</p>
                                     </td>
-                                <td>
-                                <p className={style.cantidad1}>{element.count}</p>
-                                </td>
-                                </td>
-                            </tr>
-                            </div>
-                        ))}
-                        </tbody>
-                        <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
-                            </div>
+                                    <td className={style.tdList1}>
+                                        <p className={style.cantidad}>Cantidad:</p>
+                                    </td>
+                                    <td>
+                                        <p className={style.cantidad1}>{element.count}</p>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                                </table>
+                                <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
                         </div>
                     </div>
                 )

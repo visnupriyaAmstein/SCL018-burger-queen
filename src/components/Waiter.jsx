@@ -20,4 +20,3 @@ const Waiter  = () => {
 };
 
 export default Waiter;
-
