@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
 	if(usuario){
 		return children;
 	} else {
-		return <Navigate replace to="/waiter" />;
+		return <Navigate replace to="/" />;
 	}
 }
  //toma los componentes hijos y los re direcciona

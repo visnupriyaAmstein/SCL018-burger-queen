@@ -3,6 +3,7 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState} from "react";
 import style from "./css/OrdersList.module.css"
 import { doc, updateDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 const OrdersReady = () => {
 
@@ -27,7 +28,7 @@ const OrdersReady = () => {
         console.log(idOrder);
         const postEdit = doc(db, 'orders', idOrder);
         await updateDoc(postEdit, {
-            Status: 'Terminado',
+            Status: 'Entregado',
         });
     };
 
@@ -47,25 +48,45 @@ const OrdersReady = () => {
 
     return (
         <>
-        <h2>PEDIDOS LISTOS PARA SERVIR</h2>
+        <header>
+        <h2 className={style.titleServir}> LISTOS PARA SERVIR</h2>
+        <Link to="/menu"><button className={style.backBtn}></button><i className="far fa-arrow-alt-circle-left opacity-75 fa-3x"></i></Link>
+        </header>
             <div>
                 {sortedPendingOrders.map((order) => (
-                    <div key={order.id} className={style.ordersKitchen}>
-                        <h1>Garzón: Garzón</h1>
+                    <div key={order.id}  className={style.ordersKitchen}>
+                        <div className={style.containerWhite}> 
+                        <div className={style.garzonMesa}>
+                        <h1>Garzón: {order.Garzon}</h1>
                         <h2>Mesa: {order.Table}</h2>
+                        </div>
+                        <table className={style.list}>
+                        <tbody>
                         {order.Order.map((element) => (
-                            <div key={element.id}>
-                                <p>Pedido: {element.name} Cantidad: {element.count}</p>
-                            </div>
+                            <tr key={element.id} className={style.containerPedido}>
+                                <td className={style.tdList}>
+                                <p className={style.pedido}>Pedido:</p>
+                                <p className={style.pedido1}>{element.name}</p>
+                                </td>
+                                <td className={style.tdList1}>
+                                <p className={style.cantidad}>Cantidad:</p>
+                                </td> 
+                                <td>
+                                <p className={style.cantidad1}>{element.count}</p>
+                                </td>
+                              </tr>
                         ))}
-                        <p>Total a pagar: $ {order.Total}</p>
-                        <button onClick={() => statusChange(order.id)}>PEDIDO ENTREGADO</button>
+                        </tbody>
+                            </table>
+                            <p className={style.total}>Total a pagar: $ {order.Total}</p>
+                            <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO SERVIDO</button>
+                        </div>
                     </div>
                 )
                 )}
             </div>
         </>
-        );
+    );
 }
 
 export default OrdersReady;

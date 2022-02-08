@@ -78,13 +78,13 @@ const Menu = () => {
         <div className="main">
             <section className="menu section">
                 <div className="logo">
-                    <img src={imgLogo}/>
+                    <img src={imgLogo} alt=""/>
                 </div>
                 <div className="btnLogOutAndOrdersReady">
                         <BtnLogOut/>
                         <Link to="/orderReady"
                         className="px-3 py-2 flex items-center"
-                        alt="Acceso a lista de entrega">
+                        aria-label="ordernReady">
                         <i className="far fa-check-circle opacity-75 fa-3x"></i>
                         </Link>
                     </div>

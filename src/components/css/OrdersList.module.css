@@ -1,5 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .ordersKitchen {
     display: flex;
-    background-color: blueviolet;
+    align-items: center;
+    background-color: #DFC533;
     flex-direction: column;
+    margin: 10px;
+    color:black;
+    width: 50vw;
+    border-radius: 15px;
+    margin-left: 25vw;
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    margin: 1vh;
+}
+.titleServir {
+    font-family: 'indiaFont';
+    font-size: 4rem;
+    margin-left: 30vw;
+}
+.titlePendientes {
+    font-family: 'indiaFont';
+    font-size: 4rem;
+    margin-left: 27vw; 
+    margin-top: -5vh;
+}
+.btnLogOut {
+    margin-left: 94vw;
+    margin-top: 1vh;
+}
+.backBtn {
+    margin-left: 23vw;
+}
+.containerWhite {
+    background-color: white;
+    width: 45vw;
+    margin: 18px;
+    border-radius: 20px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnEntregado {
+    background-color:  #4CAF50;
+    width: 16vw;
+    border-radius: 10px;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    margin-left: 14vw;
+}
+.total { 
+    color:brown;
+    margin-left: 16vw;
+}
+p, h1, h2 {
+    margin: 4px;
+}
+.tdList {
+    display: flex;
+}
+.pedido , .cantidad {
+    color:#4CAF50;
+}
+.pedido1 , .cantidad1{
+    color: black;
+}
+.garzonMesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: brown;
 }
