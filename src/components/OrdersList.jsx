@@ -52,20 +52,41 @@ return (
     <div className="btn_LogOut">
         <BtnLogOut/>
     </div>
-    <h2>PEDIDOS PENDIENTES</h2>
+    <h2 className={style.titlePendientes}>Ordenes Pendientes</h2>
         <div>
-            {sortedPendingOrders.map((order) => (
-                <div key={order.id} className={style.ordersKitchen}>
-                    <h1>Garzón: Garzón</h1>
-                    <h2>Mesa: {order.Table}</h2>
-                    {order.Order.map((element) => (
-                        <div key={element.id}>
-                            <p>Pedido: {element.name} Cantidad: {element.count}</p>
+        {sortedPendingOrders.map((order) => (
+                    <div key={order.id}  className={style.ordersKitchen}>
+                        <div className={style.containerWhite}> 
+                        <div className={style.garzonMesa}>
+                        <h1>Garzón: {order.Garzon}</h1>
+                        <h2>Mesa: {order.Table}</h2>
                         </div>
-                    ))}
-                    <button onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
-                </div>
-            )
+                        <div className={style.list}>
+                        <tbody>
+                        {order.Order.map((element) => (
+                            <div className={style.containerPedido}>
+                            <tr key={element.id}>
+                                <td className={style.tdList}>
+                                <p className={style.pedido}>Pedido:</p>
+                                <p className={style.pedido1}>{element.name}</p>
+                                </td>
+                                <td className={style.tdList1}>
+                                    <td> 
+                                    <p className={style.cantidad}>Cantidad:</p>
+                                    </td>
+                                <td>
+                                <p className={style.cantidad1}>{element.count}</p>
+                                </td>
+                                </td>
+                            </tr>
+                            </div>
+                        ))}
+                        </tbody>
+                        <button className={style.btnEntregado} onClick={() => statusChange(order.id)}>PEDIDO LISTO</button>
+                            </div>
+                        </div>
+                    </div>
+                )
             )}
         </div>
         </>
