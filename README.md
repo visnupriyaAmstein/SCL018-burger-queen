@@ -1,4 +1,4 @@
-![rishikesh]()
+![rishikesh](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/logoReadme.png?raw=true)
 
 ## Índice
 
@@ -48,9 +48,9 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 ## 6. Visualizacion de la Interfaz
 
-![foto3]()
-![foto4]()
-![foto5]()
+![foto3](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/vista1.png?raw=true)
+![foto4](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/vista2.png?raw=true)
+![foto5](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/vista3.png?raw=true)
 
 ## 7. Historias de Usuarios
 
@@ -91,6 +91,12 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 ## 8. Informe de Lighthouse
 
+![foto6](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/ligthouse.png?raw=true)
+
 ## 9. Test de Usabilidad
 
+* 
+
 ## 10. Enlace Página
+
+* https://burger-queen-scl018.web.app/
