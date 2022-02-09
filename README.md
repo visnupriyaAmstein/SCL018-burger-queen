@@ -15,7 +15,7 @@
 
 ## 1. Restaurante Rishikesh 
 
-Rishikesh es un restaurante de comida Hindú fundado por Visnupriya Amstein y Fritza Véliz. Este proyecto surgió cuando ambas visitaron[_la ciudad de Rishikesh_](https://www.worldpackers.com/es/articles/25-cosas-que-hacer-en-rishikesh-india) en India y conocieron la belleza de sus templos y se deleitaron con sus platillos tan exóticos para occidente, sin embargo, todo el proyecto cobro sentido cuando leyeron el significado de "Rishikesh" en sánscrito: "Él maestro ha conquistado sus sentidos" y se propusieron la meta de hacer realidad esta frase para todos aquellos que probaran sus comidas, deleitar todos sus sentidos. 
+Rishikesh es un restaurante de comida Hindú fundado por Visnupriya Amstein y Fritza Véliz. Este proyecto surgió cuando ambas visitaron la ciudad de [_Rishikesh_](https://www.worldpackers.com/es/articles/25-cosas-que-hacer-en-rishikesh-india) en India y conocieron la belleza de sus templos y se deleitaron con sus platillos tan exóticos para occidente, sin embargo, todo el proyecto cobro sentido cuando leyeron el significado de "Rishikesh" en sánscrito: "Él maestro ha conquistado sus sentidos" y se propusieron la meta de hacer realidad esta frase para todos aquellos que probaran sus comidas, deleitar todos sus sentidos. 
 
 ## 2. Resumen del Proyecto
 
@@ -40,11 +40,11 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 * Para comprender inicialmente el flujo del proyecto se realizó un Diagrama de Flujo
 
-![foto1]()
+![foto1](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/diagramaFlujo.png?raw=true)
 
 ## 5. Prototipo de Alta Fidelidad 
 
-![foto2]()
+![foto2](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/figma.png?raw=true)
 
 ## 6. Visualizacion de la Interfaz
 
