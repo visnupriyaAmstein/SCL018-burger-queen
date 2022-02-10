@@ -38,15 +38,17 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 ## 4. Diagrama de Flujo
 
-* Para comprender inicialmente el flujo del proyecto se realizó un Diagrama de Flujo
+* Para comprender inicialmente el flujo del proyecto se realizó un Diagrama de Flujo.
 
 ![foto1](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/diagramaFlujo.png?raw=true)
 
 ## 5. Prototipo de Alta Fidelidad 
 
+* El diseño de la página web fue realizado en Figma.
+
 ![foto2](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/figma.png?raw=true)
 
-## 6. Visualizacion de la Interfaz
+## 6. Visualizacion de la Interfaz en Tablet
 
 ![foto3](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/vista1.png?raw=true)
 ![foto4](https://github.com/Fritza02/SCL018-burger-queen/blob/main/src/img/imgReadme/vista2.png?raw=true)
@@ -97,7 +99,7 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 | Funcionalidad | Aspecto Visual | Accesibilidad |
 | --- | --- | --- |
-| Yo como dueña de un restaurant considero que la aplicación cumple los requerimientos básicos que necesita un garzxn. El menú es entendible e intuitivo y la vista de cocina y la de pedidos listos para servir muestran lo justo y necesario| La aplicación tiene colores y diseño llamativo, me gustó especialmente que el menú tenga imágenes, ya que así es más sencillo de recordar para los garzonxs y para que estos puedan mostrar los platillos a los clientes | Yo tengo problemas de visión y aún así pude leer y entender todo lo que decía en la aplicación, los contrastes de colores favorecieron mucho en este sentido |
+| Yo como dueña de un restaurant considero que la aplicación cumple los requerimientos básicos que necesita un garzxn. El menú es entendible e intuitivo y la vista de cocina y la de pedidos listos para servir muestran lo justo y necesario.| La aplicación tiene colores y diseño llamativo, me gustó especialmente que el menú tenga imágenes, ya que así es más sencillo de recordar para los garzonxs y para que estos puedan mostrar los platillos a los clientes. | Yo tengo problemas de visión y aún así pude leer y entender todo lo que decía en la aplicación, los contrastes de colores favorecieron mucho en este sentido. |
 
 ## 10. Enlace Página
 
