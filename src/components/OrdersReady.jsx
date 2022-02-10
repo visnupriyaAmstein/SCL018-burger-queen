@@ -18,14 +18,12 @@ const OrdersReady = () => {
             return { ...order.data(), id: order.id };
             })
             setPostedOrders(arrayOrders);
-            console.log(arrayOrders);
         }
         )
     }, []);
 
       //Función para editar el Status de los pedidos
     const statusChange = async (idOrder) => {
-        console.log(idOrder);
         const postEdit = doc(db, 'orders', idOrder);
         await updateDoc(postEdit, {
             Status: 'Entregado',

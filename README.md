@@ -103,4 +103,4 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 ## 10. Enlace Página
 
-* https://burger-queen-scl018.web.app/
+* https://burger-queen-scl018.web.app

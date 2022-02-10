@@ -9,30 +9,24 @@ const InicioSesion = () => {
     const navigate = useNavigate();
 	const [correo, establecerCorreo] = useState('');
 	const [password, establecerPassword] = useState('');
-	// const [garzon, establecerGarzon] = useState('');
 
     const handleChange = (e) => {
 		if(e.target.name === 'email'){
 			establecerCorreo(e.target.value);
 		} else if (e.target.name === 'password'){
 			establecerPassword(e.target.value);
-		}//  else if (e.target.value){
-		// 	establecerGarzon(e.target.value)
-		// 	console.log(e.target.value)
-		// }
+		}
 	}
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if(correo === '' || password === ''){
-			console.log('porfavor rellenar datos');
 			return;
 		}
 		try {
 			await signInWithEmailAndPassword(auth, correo, password);
 			navigate('/waiter');
-            console.log('entraste');
 		} catch(error) {
 			console.log(error)
 			let mensaje;
