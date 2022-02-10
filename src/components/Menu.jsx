@@ -33,7 +33,6 @@ const Menu = () => {
     };
 
     const addProducts = (product) => {
-        console.log("se agrego un producto",product);
         setOrdenState((prevState) => ({
             ...prevState, 
             cart: prevState.cart.find((cartItem) => cartItem.id === product.id)
@@ -47,7 +46,6 @@ const Menu = () => {
     }
 
     const removeProducts = (product) => {
-        console.log("se quito un producto",product);
         setOrdenState((prevState) => ({
             ...prevState, 
             cart: prevState.cart.find((cartItem) => cartItem.id === product.id)

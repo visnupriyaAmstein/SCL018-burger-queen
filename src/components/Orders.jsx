@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {db} from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import style from "./css/Orders.module.css"
@@ -82,7 +82,6 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
     // Función para crear la colección de "orders"
     const toFirebase = async (e) => {
         e.preventDefault();
-        console.log("funcionando toFirebase");
     try {
         const docRef = await addDoc(collection(db, 'orders'), {
             Garzon: garzon,
@@ -98,10 +97,6 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
         console.error('Error adding document: ', e);
     }
 };
-
-/*useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [cartItems]);*/
 
     return (
         <>
