@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .order {
-    width: 320px;
+    width: 330px;
     display: flex;
     background-color:#DFC533 ;
     padding-right: 20px;
@@ -20,17 +20,20 @@
 }
 .titlesAbove {
     display: flex;
+    width: 26vw;
     background-color: white;
     justify-content: center;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 10px;
+
 }
 .tableInfo {
     display: flex;
+    width: 26vw;
     height: 150px;
     background-color: white;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
     justify-content: center;
@@ -126,4 +129,10 @@ tr {
 }
 .interactionWithOrder {
     color: black;
+}
+.countPrice {
+    display: flex;
+}
+.listP {
+    font-size: 15px;
 }
