@@ -40,5 +40,5 @@ const AuthProvider1 = ({children}) => {
 	);
 	
 }
- 
+
 export {AuthProvider1, AuthContext, useAuth };
