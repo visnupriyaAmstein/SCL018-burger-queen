@@ -129,7 +129,7 @@ const Orders = ({cartItems, addProduct, removeProducts, removeAllProducts, delet
                                         <button type="button" onClick={() => addProduct(item)} className={style.changeNumberItem} id="add"><i className="fas fa-plus-circle text-green-500"></i></button>
                                     </td>
                                     <td>
-                                        <p>{item.count} x {item.price}</p>
+                                        <p className={style.countPrice}>{item.count} x {item.price}</p>
                                     </td>
                                     <td>
                                         <button type="button" onClick={() => removeProducts(item)} className={style.changeNumberItem} id="deduct"><i className="fas fa-minus-circle text-amber-500"></i></button>
