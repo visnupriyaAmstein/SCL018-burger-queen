@@ -95,7 +95,9 @@ Si ingresa a la vista "Cocina" se desplegarán todos los pedidos que inicialment
 
 ## 9. Test de Usabilidad
 
-* 
+| Funcionalidad | Aspecto Visual | Accesibilidad |
+| --- | --- | --- |
+| Yo como dueña de un restaurant considero que la aplicación cumple los requerimientos básicos que necesita un garzxn. El menú es entendible e intuitivo y la vista de cocina y la de pedidos listos para servir muestran lo justo y necesario| La aplicación tiene colores y diseño llamativo, me gustó especialmente que el menú tenga imágenes, ya que así es más sencillo de recordar para los garzonxs y para que estos puedan mostrar los platillos a los clientes | Yo tengo problemas de visión y aún así pude leer y entender todo lo que decía en la aplicación, los contrastes de colores favorecieron mucho en este sentido |
 
 ## 10. Enlace Página
 
