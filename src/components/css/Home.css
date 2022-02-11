@@ -6,6 +6,8 @@
     font-family: 'indiaFont';
     margin-top: 75vh; 
     margin-left: 38vw;
+    display: flex;
+    align-items: center;
 }
 .imgHome {
     margin-top: -75vh;

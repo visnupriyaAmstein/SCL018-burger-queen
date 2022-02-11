@@ -136,3 +136,31 @@ tr {
 .listP {
     font-size: 15px;
 }
+
+@media only screen and (min-width: 1600px) {
+    .order {
+        width: 495px;
+        display: flex;
+        align-items: center;
+        background-color:#DFC533 ;
+        padding-right: 20px;
+        color:black;
+        flex-direction: column;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .order {
+        width: 418px;
+        display: flex;
+        align-items: center;
+        background-color:#DFC533 ;
+        padding-right: 20px;
+        color:black;
+        flex-direction: column;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
