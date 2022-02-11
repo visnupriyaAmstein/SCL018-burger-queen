@@ -34,7 +34,7 @@ const AuthProvider1 = ({children}) => {
 			De esta forma nos aseguramos de no cargar el resto de la app hasta que el usuario haya sido establecido.
 			
 			Si no hacemos esto al refrescar la pagina el componente children intenta cargar inmediatamente, 
-			antes de haber comprobado que existe un usuario. */}
+			antes de haber comprobado que existe un usuario.*/}
 			{!cargando && children}
 		</AuthContext.Provider>
 	);
